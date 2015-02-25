@@ -23,6 +23,7 @@ import (
 func main() {
 	ctx := context.Background()
 	ctx = db.OpenSQL(ctx, "main", "mysql", "root:hunter2@unix(/tmp/mysql.sock)/myCoolDB")
+	defer db.Close(ctx) // closes all DB connections
 	kami.Context = ctx
 
 	kami.Get("/hello/:name", hello)
