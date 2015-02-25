@@ -49,8 +49,8 @@ func CloseSQL(ctx context.Context, name string) context.Context {
 	return removeSQL(ctx, name)
 }
 
-// CloseAllSQL closes all open SQL connections and returns a new context without them.
-func CloseAllSQL(ctx context.Context) context.Context {
+// CloseSQLAll closes all open SQL connections and returns a new context without them.
+func CloseSQLAll(ctx context.Context) context.Context {
 	if idx := sqlIndexFrom(ctx); idx != nil {
 		for name, _ := range idx {
 			ctx = CloseSQL(ctx, string(name))
