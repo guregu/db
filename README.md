@@ -1,3 +1,7 @@
+## Update from 2022
+
+This project was made in the wild west of pre-stdlib context days to explore what was possible. Since then, we've all agreed that putting databases in your context is generally a bad idea. Transactions are arguably OK. Regardless, you probably shouldn't use this.
+
 ## db [![GoDoc](https://godoc.org/github.com/guregu/db?status.svg)](https://godoc.org/github.com/guregu/db) 
 `import "github.com/guregu/db"`
 
